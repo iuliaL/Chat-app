@@ -1,0 +1,63 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font: 13px Helvetica, Arial; height: 100vh; background-color: #eee}
+form { background: #000; padding: 3px;  width: 100%; }
+#chatBox { position: fixed; bottom: 0; opacity: 0.3; right: 15px; width: calc(100% - 215px);}
+#nicknameForm { position: fixed; top: 0; width: 310px; right: 15px; z-index: 10 }
+#username , button[type='submit']{ width: 150px}
+#m {width: calc(100% - 155px)}
+form input { border: 0; padding: 10px; width: 90%; }
+form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+#main-container {
+    position: fixed;
+    left: 200px;
+    height: 100%;
+    width: 100%;
+}
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    width: calc(100% - 200px);
+}
+.error { display: none;
+    text-align: center;
+    position: fixed;
+    top: 0 ;
+    width: 50%;
+    transform: translate3d(-50%,0,0) ;
+    left: 50% ;
+    padding: 10px;
+    background-color: aquamarine;
+    color: #999;
+    z-index: 10;}
+#messages li.bubble {
+    background: white;
+    padding: 5px 10px;
+    margin: 15px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;}
+#messages li:nth-child(odd) { background: #eee; }
+#messages li.whisper { background-color: mistyrose}
+
+small {
+    color: #222;
+    font-weight: 200;
+    float: right;
+}
+
+.nickname {
+    color: purple;
+    display: block;
+    padding-bottom: 5px
+}
+#users {
+    position: fixed;
+    left: 0; height: 100vh; width: 200px;
+    padding: 10px;background: lightblue;
+    border-right: 1px solid #ccc}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chat app - Iulia Lungu</title>
+	<link href="/static/app.css" rel="stylesheet">
+</head>
+<body>
+	<div class="error"></div>
+	
+	<form id="nicknameForm">
+		<input type="text" id = "username" placeholder="Enter your name here">
+		<button type="submit">Use this nickname</button>
+	</form>
+	<div id="main-container">
+		<ul id="messages"></ul>
+		
+		<form id="chatBox">
+			<input id="m" autocomplete="off" placeholder="Type your message..."/>
+			<button type="submit">Send</button>
+		</form>
+	</div>
+	<div id="users"></div>
+	
+	<!--SCRIPTS HERE-->
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/static/client.js"></script>
+</body>
+</html>
